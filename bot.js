@@ -5,13 +5,37 @@ import cron from './cron.js'
 const bot = new Telegraf("5544848709:AAG0FsiIJQ-RrCoD5nYG2D77suGFT-25Ncs")
 cron.init()
 
+const button =  { 
+    reply_markup: { 
+      inline_keyboard: [ 
+        [ 
+          { 
+            text: process.env.CHANNEL_SUBSCRIBE_CHECK, 
+            callback_data: process.env.CHANNEL_SUBSCRIBE_CHECK, 
+          } 
+        ], 
+        [ 
+          { 
+            text: process.env.CHANNEL_SUBSCRIBE_BUTTON, 
+            url: "https://t.me/asedotalent_news", 
+          } 
+        ], 
+        [ 
+          { 
+            text: process.env.CHAT_SUBSCRIBE_BUTTON, 
+            url: "https://t.me/asedotalent_chat", 
+          } 
+        ] 
+      ]
+    } 
+  }
 
 bot.start((ctx) => {
     ctx.reply('Welcome')
 })
 
 function message() {
-    bot.telegram.sendMessage("@PutinZdohhhhh", "еще не сдох")
+    bot.telegram.sendMessage("@PutinZdohhhhh", "еще не сдох", button)
 }
 
 bot.launch()
