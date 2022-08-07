@@ -10,22 +10,10 @@ const button =  {
       inline_keyboard: [ 
         [ 
           { 
-            text: process.env.CHANNEL_SUBSCRIBE_CHECK, 
-            callback_data: process.env.CHANNEL_SUBSCRIBE_CHECK, 
+            text: "process.env.CHANNEL_SUBSCRIBE_CHECK", 
+            callback_data:" process.env.CHANNEL_SUBSCRIBE_CHECK", 
           } 
-        ], 
-        [ 
-          { 
-            text: process.env.CHANNEL_SUBSCRIBE_BUTTON, 
-            url: "https://t.me/asedotalent_news", 
-          } 
-        ], 
-        [ 
-          { 
-            text: process.env.CHAT_SUBSCRIBE_BUTTON, 
-            url: "https://t.me/asedotalent_chat", 
-          } 
-        ] 
+        ]
       ]
     } 
   }
@@ -35,7 +23,7 @@ bot.start((ctx) => {
 })
 
 function message() {
-    bot.telegram.sendMessage("@PutinZdohhhhh", "еще не сдох", button)
+    const message = bot.telegram.sendMessage("@PutinZdohhhhh", "еще не сдох", button)
 }
 
 bot.launch()
