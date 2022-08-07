@@ -10,7 +10,7 @@ const button =  {
       inline_keyboard: [ 
         [ 
           { 
-            text: "process.env.CHANNEL_SUBSCRIBE_CHECK", 
+            text: "click me", 
             callback_data:" process.env.CHANNEL_SUBSCRIBE_CHECK", 
           } 
         ]
