@@ -11,7 +11,7 @@ const button =  {
         [ 
           { 
             text: "click me", 
-            callback_data:"https://i.ds.at/2ZxwsA/rs:fill:750:0/plain/2022/03/22/putin-meme.jpg", 
+            url:"https://i.ds.at/2ZxwsA/rs:fill:750:0/plain/2022/03/22/putin-meme.jpg", 
           } 
         ]
       ]
